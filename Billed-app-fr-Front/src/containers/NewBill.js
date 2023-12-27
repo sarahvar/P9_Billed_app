@@ -21,25 +21,35 @@ export default class NewBill {
     const filePath = e.target.value.split(/\\/g)
     const fileName = filePath[filePath.length-1]
     const formData = new FormData()
-    const email = JSON.parse(localStorage.getItem("user")).email
-    formData.append('file', file)
-    formData.append('email', email)
+    const email = JSON.parse(localStorage.getItem("user")).email;
+    if (
+      file.type == "image/jpg" ||
+      file.type == "image/jpeg" ||
+      file.type == "image/png"
+    ) {
+      formData.append("file", file);
+      formData.append("email", email);
 
-    this.store
-      .bills()
-      .create({
-        data: formData,
-        headers: {
-          noContentType: true
-        }
-      })
-      .then(({fileUrl, key}) => {
-        console.log(fileUrl)
-        this.billId = key
-        this.fileUrl = fileUrl
-        this.fileName = fileName
-      }).catch(error => console.error(error))
-  }
+      this.store
+        .bills()
+        .create({
+          data: formData,
+          headers: {
+            noContentType: true,
+          },
+        })
+        .then(({ fileUrl, key }) => {
+          console.log(fileUrl);
+          this.billId = key;
+          this.fileUrl = fileUrl;
+          this.fileName = fileName;
+        })
+        .catch((error) => console.error(error));
+    } else {
+      alert("Erreur : Le fichier doit être au format .jpg, .jpeg ou .png !");
+      this.document.querySelector(`input[data-testid="file"]`).value = "";
+    }
+  };
   handleSubmit = e => {
     e.preventDefault()
     console.log('e.target.querySelector(`input[data-testid="datepicker"]`).value', e.target.querySelector(`input[data-testid="datepicker"]`).value)
@@ -58,7 +68,7 @@ export default class NewBill {
       status: 'pending'
     }
     this.updateBill(bill)
-    this.onNavigate(ROUTES_PATH['Bills'])
+    this.onNavigate(ROUTES_PATH["Bills"])
   }
 
   // not need to cover this function by tests
@@ -68,7 +78,7 @@ export default class NewBill {
       .bills()
       .update({data: JSON.stringify(bill), selector: this.billId})
       .then(() => {
-        this.onNavigate(ROUTES_PATH['Bills'])
+        this.onNavigate(ROUTES_PATH["Bills"])
       })
       .catch(error => console.error(error))
     }
