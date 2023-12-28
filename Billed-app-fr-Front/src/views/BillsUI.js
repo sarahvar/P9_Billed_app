@@ -18,19 +18,16 @@ const row = (bill) => {
     </tr>
     `)
   }
-
   const rows = (data) => {
-    return (data && data.length) 
-    ? [...data]
-      .sort((a, b) => {
-        return new Date(b.date) - new Date(a.date)
-      })
-      .map(bill => row(bill))
-      .join("")
-    : ""
-  }
+    const antiChrono = (a, b) => (a.date < b.date ? 1 : -1);
+    return data && data.length
+      ? data
+          .sort(antiChrono)
+          .map((bill) => row(bill))
+          .join("")
+      : "";
+  };
   
-
 export default ({ data: bills, loading, error }) => {
   
   const modal = () => (`
