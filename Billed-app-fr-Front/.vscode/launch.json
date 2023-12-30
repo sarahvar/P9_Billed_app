@@ -4,6 +4,7 @@
             "type": "node",
             "name": "vscode-jest-tests.v2",
             "request": "launch",
+            "url": "http://localhost:8080",
             "args": [
                 "test",
                 "--runInBand",
