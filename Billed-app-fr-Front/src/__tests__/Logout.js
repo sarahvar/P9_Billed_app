@@ -5,7 +5,7 @@
 import { screen } from "@testing-library/dom"
 import Logout from "../containers/Logout.js"
 import '@testing-library/jest-dom/extend-expect'
-import { localStorageMock } from "../__mocks__/localStorage.js"
+import { localStorageMock } from "../__mocks__/localStorageMock.js"
 import DashboardUI from "../views/DashboardUI.js"
 import userEvent from '@testing-library/user-event'
 import { ROUTES } from "../constants/routes"
