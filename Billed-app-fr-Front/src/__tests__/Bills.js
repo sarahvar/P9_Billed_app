@@ -171,6 +171,8 @@ describe("Given I am connected as an employee", () => {
       });
     });
 
+    // TEST D'INTEGRATION GET
+
     // Contexte : Récupération des données des factures depuis l'API
     describe("When bills are being fetched from Api", () => {  
 

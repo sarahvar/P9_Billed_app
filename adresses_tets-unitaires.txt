@@ -1,3 +1,9 @@
+TESTS UNITAIRES ET D'INTEGRATION
+
+Lancer l’application avec live-server
+pour pouvoir le lire et aller aux
+adresses suivantes =
+
 Tous les fichiers dans containers:
 
 http://127.0.0.1:8080/coverage/lcov-report/containers/index.html
