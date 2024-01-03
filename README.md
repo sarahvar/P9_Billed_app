@@ -13,7 +13,7 @@ npm install pour installer toutes les dépendances nécessaires
 Installer live-server de façon globale : npm install -g live-server
 npm start pour lancer le serveur créé par live server sur le port 8080
 
-Et c'est parti !
+ Et c'est parti !
 
 ![image](https://github.com/sarahvar/P9_Billed_app/assets/100738177/2a69395c-9f9a-491c-b1f4-cd035dbd8e30)
 
