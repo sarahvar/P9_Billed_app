@@ -3,6 +3,6 @@
 
 ![image](https://github.com/sarahvar/P9_Billed_app/assets/100738177/2a69395c-9f9a-491c-b1f4-cd035dbd8e30)
 
-![image](https://github.com/sarahvar/P9_Billed_app/assets/100738177/37028518-5cbd-4b26-9599-43ecbc462908)
+
 
 
