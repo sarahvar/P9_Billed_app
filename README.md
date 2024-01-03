@@ -3,6 +3,15 @@
 
 ![image](https://github.com/sarahvar/P9_Billed_app/assets/100738177/2a69395c-9f9a-491c-b1f4-cd035dbd8e30)
 
+*Installation du backend et mise en route
+Se placer dans le dossier Billed-app-FR-Back
+npm install pour installer toutes les dépendances nécessaires
+npm run run:dev pour lancer le serveur backend sur le port 5678
 
 
+*Se placer dans le dossier Billed-app-FR-Front
+npm install pour installer toutes les dépendances nécessaires
+Installer live-server de façon globale : npm install -g live-server
+npm start pour lancer le serveur créé par live server sur le port 8080
 
+Et c'est parti !
