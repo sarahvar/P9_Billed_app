@@ -14,6 +14,7 @@ import mockStore from "../__mocks__/store.js";
 import router from "../app/Router.js";
 import userEvent from "@testing-library/user-event";
 import ErrorPage from "../views/ErrorPage.js";
+import { downloadPdf } from "../containers/Bills.js"
 
 // Mock du magasin pour les tests
 jest.mock("../app/store", () => mockStore);
