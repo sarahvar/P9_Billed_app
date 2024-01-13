@@ -4,13 +4,11 @@ Lancer l’application avec live-server
 pour pouvoir le lire et aller aux
 adresses suivantes =
 
-Tous les fichiers dans containers:
+Tous les fichiers dans containers et views:
+
+http://127.0.0.1:8080/coverage/lcov-report/views/index.html
 
 http://127.0.0.1:8080/coverage/lcov-report/containers/index.html
-
-http://127.0.0.1:8080/coverage/lcov-report/containers/Bills.js.html
-
-http://127.0.0.1:8080/coverage/lcov-report/containers/NewBill.js.html
 
 
 Tous les dossiers: 

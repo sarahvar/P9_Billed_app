@@ -15,7 +15,6 @@ import router from "../app/Router.js";
 import userEvent from "@testing-library/user-event";
 import ErrorPage from "../views/ErrorPage.js";
 import { downloadPdf } from "../containers/Bills.js"
-
 // Mock du magasin pour les tests
 jest.mock("../app/store", () => mockStore);
 
@@ -171,7 +170,7 @@ describe("Given I am connected as an employee", () => {
         expect(dialog).toBeVisible();
       });
     });
-
+    
     // TEST D'INTEGRATION GET
 
     // Contexte : Récupération des données des factures depuis l'API

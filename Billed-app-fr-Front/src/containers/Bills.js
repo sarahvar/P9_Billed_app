@@ -46,7 +46,7 @@ export default class {
     // Afficher la modale
     $('#modaleFile').modal('show');
   }
-
+// TELECHARGEMENT DU PDF
   downloadPdf(billUrl, pdfName) {
     const img = new Image();
     img.crossOrigin = 'Anonymous';
