@@ -32,33 +32,34 @@ export default class {
         <img data-testid="billpicture" width=${imgWidth} src=${billUrl} alt="Bill" />
       </div>
     `);
+      // Afficher la modale
+      $('#modaleFile').modal('show');
 
-    // Ajoutez un bouton de téléchargement PDF
-    $('#modaleFile').find(".modal-body").append(`
-      <div style='text-align: center; margin-top: 20px;'>
-        <button id="downloadPdfButton" class="btn btn-primary">Télécharger en PDF</button>
-      </div>
-    `);
+//     // Ajoutez un bouton de téléchargement PDF
+//     $('#modaleFile').find(".modal-body").append(`
+//       <div style='text-align: center; margin-top: 20px;'>
+//         <button id="downloadPdfButton" class="btn btn-primary">Télécharger en PDF</button>
+//       </div>
+//     `);
 
-    // Ajoutez un gestionnaire d'événements pour le clic sur le bouton de téléchargement PDF
-    $('#downloadPdfButton').on('click', () => this.downloadPdf(billUrl, 'nom-du-fichier.pdf'));
+//     // Ajoutez un gestionnaire d'événements pour le clic sur le bouton de téléchargement PDF
+//     $('#downloadPdfButton').on('click', () => this.downloadPdf(billUrl, 'nom-du-fichier.pdf'));
 
-    // Afficher la modale
-    $('#modaleFile').modal('show');
-  }
-// TELECHARGEMENT DU PDF
-  downloadPdf(billUrl, pdfName) {
-    const img = new Image();
-    img.crossOrigin = 'Anonymous';
-    img.src = billUrl;
+  
+//   }
+// // TELECHARGEMENT DU PDF
+//   downloadPdf(billUrl, pdfName) {
+//     const img = new Image();
+//     img.crossOrigin = 'Anonymous';
+//     img.src = billUrl;
 
-    img.onload = () => {
-      const pdf = new jsPDF();
-      const width = pdf.internal.pageSize.getWidth();
-      const height = pdf.internal.pageSize.getHeight();
-      pdf.addImage(img, 'JPEG', 0, 0, width, height);
-      pdf.save(pdfName);
-    };
+//     img.onload = () => {
+//       const pdf = new jsPDF();
+//       const width = pdf.internal.pageSize.getWidth();
+//       const height = pdf.internal.pageSize.getHeight();
+//       pdf.addImage(img, 'JPEG', 0, 0, width, height);
+//       pdf.save(pdfName);
+//     };
   }
 
   getBills() {

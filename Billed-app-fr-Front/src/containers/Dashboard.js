@@ -92,7 +92,31 @@ export default class {
       );
     if (typeof $("#modaleFileAdmin1").modal === "function")
       $("#modaleFileAdmin1").modal("show");
-  };
+  //    // Ajoutez un bouton de téléchargement PDF
+  //    $('#modaleFileAdmin1').find(".modal-body").append(`
+  //    <div style='text-align: center; margin-top: 20px;'>
+  //      <button id="downloadPdfButton" class="btn btn-primary">Télécharger en PDF</button>
+  //    </div>
+  //  `);
+
+  //  // Ajoutez un gestionnaire d'événements pour le clic sur le bouton de téléchargement PDF
+  //  $('#downloadPdfButton').on('click', () => this.downloadPdf(billUrl, 'nom-du-fichier.pdf'));
+  // };
+  // // TELECHARGEMENT DU PDF
+  // downloadPdf(billUrl, pdfName) {
+  //   const img = new Image();
+  //   img.crossOrigin = 'Anonymous';
+  //   img.src = billUrl;
+
+  //   img.onload = () => {
+  //     const pdf = new jsPDF();
+  //     const width = pdf.internal.pageSize.getWidth();
+  //     const height = pdf.internal.pageSize.getHeight();
+  //     pdf.addImage(img, 'JPEG', 0, 0, width, height);
+  //     pdf.save(pdfName);
+  //   };
+  }
+
 
   handleEditTicket(e, bill, bills) {
     if (this.counter === undefined || this.id !== bill.id) this.counter = 0;

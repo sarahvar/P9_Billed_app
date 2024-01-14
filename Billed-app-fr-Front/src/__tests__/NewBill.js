@@ -1,7 +1,7 @@
 /**
- * @
  * 
- * -environment jsdom
+ * 
+ * @jest -environment jsdom
  */
 
 // Import des fonctions de Jest pour le testing du DOM
